@@ -194,32 +194,126 @@
 
     <div class="columns is-centered has-text-centered">
 
-    <!-- Questions. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Questions</h2>
-          
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
+      <!-- Types of Questions in ManipBench -->
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Types of Questions in ManipBench</h2>
+          <p class="has-text-justified">
+            ManipBench includes a total of <b>14156</b> multiple choice questions to evaluate the reasoning capabilities of the VLMs as robotic manipulation agents.
+            These questions are spread across numerous categories and dimensions as shown in the table below.
+            Hover over the different <b>Question Types / Tasks</b> to know more about what those questions are evaluating.
           </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+
+          <div class="table-container">
+            <table class="table is-striped is-fullwidth">
+              <thead>
+                <tr>
+                  <th style="border-bottom: 1.5px solid black; vertical-align: middle; text-align: center;">Category</th>
+                  <th style="border-bottom: 1.5px solid black; vertical-align: middle; text-align: center;">Question Types / Tasks</th>
+                  <th style="border-bottom: 1.5px solid black; vertical-align: middle; text-align: center;">Number of Questions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                    <strong>From Public Robotic Manipulation Datasets <br>(Question Type 1)</strong>
+                  </td>
+                  <td  class="tooltip-row" data-tooltip="Agent chooses the correct trajectory information given scene images and task descriptions obtained from DROID pick and place tasks.">DROID pick and place</td>
+                  <td>2020</td>
+                </tr>
+                <tr>
+                  <td class="tooltip-row" data-tooltip="Agent chooses the correct trajectory information given scene images and task descriptions obtained from DROID articulated tasks.">DROID articulated</td>
+                  <td>1640</td>
+                </tr>
+                <tr style="border-bottom: 1.5px solid black;">
+                  <td class="tooltip" data-tooltip="Agent chooses the correct trajectory information given scene images and task descriptions obtained from Bridge data.">Bridge</td>
+                  <td>3540</td>
+                </tr>
+                <tr>
+                  <td rowspan="3" style="vertical-align: middle; text-align: center;">
+                    <strong>From Public Robotic Manipulation Datasets <br>(Question Type 2)</strong>
+                  </td>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct pick and place points separately given scene images and task descriptions obtained from DROID pick and place tasks.">DROID pick and place</td>
+                  <td>1010</td>
+                </tr>
+                <tr>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct pick and place points separately given scene images and task descriptions obtained from DROID articulated tasks.">DROID articulated</td>
+                  <td>820</td>
+                </tr>
+                <tr style="border-bottom: 1.5px solid black;">
+                  <td class="tooltip" data-tooltip="Agent chooses the correct pick and place points separately given scene images and task descriptions obtained from Bridge data.">Bridge</td>
+                  <td>1770</td>
+                </tr>
+                <tr>
+                  <td rowspan="10" style="vertical-align: middle; text-align: center;">
+                    <strong>For Evaluating Fabric Manipulation (Manually Curated)</strong>
+                  </td>
+                  <td class="tooltip" data-tooltip="Evaluates physical reasoning capabilities focused on human intuition. Given four choices in natural language, the VLM has to pick the correct one based on common-sense.">Task Planning Understanding</td>
+                  <td>240</td>
+                </tr>
+                <tr>
+                  <td class="tooltip" data-tooltip="Evaluates agent's ability to infer the correct fabric state. Given an image observation and four choices describing the state (e.g., lying flat, slightly crumpled), the VLM has to pick the correct one.">Fabric State Understanding</td>
+                  <td>234</td>
+                </tr>
+                <tr>
+                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of directions by noting the location of fabric corners in the scene (e.g., “bottom-right”), which the model has to correctly identify from an image of a flat fabric.">Spatial Reasoning Abilities</td>
+                  <td>325</td>
+                </tr>
+                <tr>
+                  <td class="tooltip" data-tooltip="Evaluates agent's ability to map key-points in the image observation to the correct grid location.">Keypoint Mapping Abilities</td>
+                  <td>312</td>
+                </tr>
+                <tr>
+                  <td class="tooltip" data-tooltip="Evaluates temporal understanding capabilities by prompting VLMs to re-arrange a shuffled sequence of image observations from a single task roll-out, based on the sequence of fabric states after each action. The model has to choose the correct option from a list of different permutations of the sequence.">Temporal Understanding of Action Sequence</td>
+                  <td>240</td>
+                </tr>
+                <tr>
+                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of the impact of short versus long pick-place actions in achieving the desired fabric configuration from the initial configuration provided as an image observation.">Action Length Understanding</td>
+                  <td>240</td>
+                </tr>
+                <tr>
+                  <td class="tooltip" data-tooltip="Evaluates agent's ability to predict the correct pick-place action from four choices of robot actions to achieve a specified state transition, based on initial and final image observations.">Inverse Dynamics Understanding</td>
+                  <td>240</td>
+                </tr>
+                <tr>
+                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of interactions between a fabric and solid objects in the scene. Given an image observation of a scene, consisting of a single fabric and multiple solid objects, the VLM has to choose the correct pick-place action based on the specified constraints in natural language.">Fabric-Solid Body Interaction Understanding</td>
+                  <td>282</td>
+                </tr>
+                <tr>
+                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of interactions between multiple fabrics, particularly when performing bi-manual actions. Given an image observation of a scene, consisting of multiple fabrics lying on a table, the VLM has to choose the correct action based on the specified constraints in natural language.">Fabric-Fabric Interaction Understanding</td>
+                  <td>280</td>
+                </tr>
+                <tr style="border-bottom: 1.5px solid black;">
+                  <td class="tooltip" data-tooltip="Evaluates agent's counterfactual reasoning abilities using ground-truth data from other dimensions. Given an image observation and a description of a particular robot action, along with its impact, the VLM has to correctly reason about the consequences of any changes in the scene and/or robot action.">Counter Factual Understanding</td>
+                  <td>269</td>
+                </tr>
+                <tr>
+                  <td rowspan="4" style="vertical-align: middle; text-align: center;">
+                    <strong>From Existing Simulation Environments</strong>
+                  </td>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Place Carrot task from the SimplerEnv benchmark.">Place carrot<br>(pick and place task)</td>
+                  <td>277</td>
+                </tr>
+                <tr>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Close Drawer task from the SimplerEnv benchmark.">Close Drawer<br>(articulated manipulation task)</td>
+                  <td>83</td>
+                </tr>
+                <tr>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Straighten Rope task from the Softgym benchmark.">Straighten Rope<br>(deformable manipulation task)</td>
+                  <td>140</td>
+                </tr>
+                <tr style="border-bottom: 1.5px solid black;">
+                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Sweep Object task from the RLBench benchmark.">Sweep Object<br>(tool manipulation task)</td>
+                  <td>194</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
+      <!-- /Types of Questions in ManipBench -->
+
     </div>
-    <!--/ Questions. -->
 
   </div>
 </section>
