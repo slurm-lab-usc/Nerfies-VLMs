@@ -1,2 +1,2 @@
 # Nerfies-VLMs
-Repository maintaining the website(s) for ManipBench and/or other related projects
+Repository maintaining the website(s) for ManipBench. Will change name later.
