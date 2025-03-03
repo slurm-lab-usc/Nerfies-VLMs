@@ -489,23 +489,98 @@
 
                 // Add specific content based on the selected option
                 if (selectedOption === 'DROID pick and place (Q1)') {
-                  img.src = 'https://via.placeholder.com/400x300?text=DROID+pick+and+place';  // Replace with actual image URL
-                  displayArea.textContent = 'You selected DROID pick and place. This task involves manipulating robotic arms to pick and place objects.';
+                  img.src = 'static/images/samples/Q1/droid-pp.png';
+                  displayArea.innerHTML = `
+                    <p> The robot task is Pick up the can from the sink and put it on the counter.
+                    Now based on the image provided and the task description, please choose the correct choice from the following 4 choices that has the correct picking point and the trajectory to get the task finished.
+                    </p>
+                    <p><span class="options">Option A: Picking point: p_18, Trajectory of the gripper: d_4,c_3</span></p>
+                    <p><span class="options">Option B: Picking point: p_2, Trajectory of the gripper: b_3,b_1</span></p>
+                    <p><span class="options">Option C: Picking point: p_14, Trajectory of the gripper: e_3,a_0</span></p>
+                    <p><span class="options">Option D: Picking point: p_1, Trajectory of the gripper: c_3,e_3</span></p>
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answer: Option A</p>
+                  `;
                 } else if (selectedOption === 'DROID articulated (Q1)') {
-                  img.src = 'https://via.placeholder.com/400x300?text=DROID+articulated';  // Replace with actual image URL
-                  displayArea.textContent = 'You selected DROID articulated. This task involves controlling a robotic arm with multiple joints.';
+                  img.src = 'static/images/samples/Q1/droid-arti.png';
+                  displayArea.innerHTML = `
+                    <p> The robot task is Open the drawer.
+                    Now based on the image provided and the task description, please choose the correct choice from the following 4 choices that has the correct picking point and the trajectory to get the task finished.
+                    </p>
+                    <p><span class="options">Option A: Picking point: p_6, Trajectory of the gripper: c_0,d_3</span></p>
+                    <p><span class="options">Option B: Picking point: p_12, Trajectory of the gripper: a_2,b_4</span></p>
+                    <p><span class="options">Option C: Picking point: p_11, Trajectory of the gripper: c_3,c_4</span></p>
+                    <p><span class="options">Option D: Picking point: p_5, Trajectory of the gripper: b_2,d_2</span></p>
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answer: Option C</p>
+                  `;
                 } else if (selectedOption === 'Bridge (Q1)') {
-                  img.src = 'https://via.placeholder.com/400x300?text=Bridge';  // Replace with actual image URL
-                  displayArea.textContent = 'You selected Bridge. This task focuses on bridging operations using robotic arms.';
+                  img.src = 'static/images/samples/Q1/bridge.png';
+                  displayArea.innerHTML = `
+                    <p> The robot task is Move the mushroom to the top of the blue cloth.
+                    Now based on the image provided and the task description, please choose the correct choice from the following 4 choices that has the correct picking point and the trajectory to get the task finished.
+                    </p>
+                    <p><span class="options">Option A: Picking point: p_10, Trajectory of the gripper: d_2,e_0</span></p>
+                    <p><span class="options">Option B: Picking point: p_14, Trajectory of the gripper: b_3,c_1</span></p>
+                    <p><span class="options">Option C: Picking point: p_1, Trajectory of the gripper: d_1,c_1</span></p>
+                    <p><span class="options">Option D: Picking point: p_7, Trajectory of the gripper: b_3,c_2</span></p>
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answer: Option B</p>
+                  `;
                 } else if (selectedOption === 'DROID pick and place (Q2)') {
-                  img.src = 'https://via.placeholder.com/400x300?text=DROID+pick+and+place';  // Replace with actual image URL
-                  displayArea.textContent = 'You selected DROID pick and place. This task involves manipulating robotic arms to pick and place objects.';
+                  img.src = 'static/images/samples/Q2/droid-pp.png';
+                  displayArea.innerHTML = `
+                    <p> Question (a): The robot task is Pick up the cup and put it on the left side of the table.
+                    Now based on the image provided and the task description, please choose the picking point out of the points drawn to get the task finished.
+                    </p>
+                    <p><span class="options">Option A: p_14 &nbsp;&nbsp;&nbsp;&nbsp; Option B: p_10 &nbsp;&nbsp;&nbsp;&nbsp; Option C: p_15 &nbsp;&nbsp;&nbsp;&nbsp; Option D: p_8</span></p>
+
+                    <br>
+
+                    <p> Question (b): The robot task is Pick up the cup and put it on the left side of the table.
+                    Now based on the image provided and the task description, suppose the robot grasped at p_10, please choose the image tile the gripper should move to for finishing the task.
+                    </p>
+                    <p><span class="options">Option A: c_2 &nbsp;&nbsp;&nbsp;&nbsp; Option B: d_0 &nbsp;&nbsp;&nbsp;&nbsp; Option C: c_3 &nbsp;&nbsp;&nbsp;&nbsp; Option D: b_3</span></p>
+
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answers: Option B and Option A</p>
+                  `;
                 } else if (selectedOption === 'DROID articulated (Q2)') {
-                  img.src = 'https://via.placeholder.com/400x300?text=DROID+articulated';  // Replace with actual image URL
-                  displayArea.textContent = 'You selected DROID articulated. This task involves controlling a robotic arm with multiple joints.';
+                  img.src = 'static/images/samples/Q2/droid-arti.png';
+                  displayArea.innerHTML = `
+                    <p> Question (a): The robot task is Close the drawer.
+                    Now based on the image provided and the task description, please choose the picking point out of the points drawn to get the task finished.
+                    </p>
+                    <p><span class="options">Option A: p_13 &nbsp;&nbsp;&nbsp;&nbsp; Option B: p_16 &nbsp;&nbsp;&nbsp;&nbsp; Option C: p_11 &nbsp;&nbsp;&nbsp;&nbsp; Option D: p_18</span></p>
+
+                    <br>
+
+                    <p> Question (b): The robot task is Close the drawer.
+                    Now based on the image provided and the task description, suppose the robot grasped at p_11, please choose the image tile the gripper should move to for finishing the task.
+                    </p>
+                    <p><span class="options">Option A: c_2 &nbsp;&nbsp;&nbsp;&nbsp; Option B: c_4 &nbsp;&nbsp;&nbsp;&nbsp; Option C: b_1 &nbsp;&nbsp;&nbsp;&nbsp; Option D: e_0</span></p>
+
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answers: Option C and Option A</p>
+                  `;
                 } else if (selectedOption === 'Bridge (Q2)') {
-                  img.src = 'https://via.placeholder.com/400x300?text=Bridge';  // Replace with actual image URL
-                  displayArea.textContent = 'You selected Bridge. This task focuses on bridging operations using robotic arms.';
+                  img.src = 'static/images/samples/Q2/bridge.png';
+                  displayArea.innerHTML = `
+                    <p> Question (a): The robot task is put corn in pot which is in sink distractors
+                    Now based on the image provided and the task description, please choose the picking point out of the points drawn to get the task finished.
+                    </p>
+                    <p><span class="options">Option A: p_7 &nbsp;&nbsp;&nbsp;&nbsp; Option B: p_2 &nbsp;&nbsp;&nbsp;&nbsp; Option C: p_6 &nbsp;&nbsp;&nbsp;&nbsp; Option D: p_3</span></p>
+
+                    <br>
+
+                    <p> Question (b): The robot task is put corn in pot which is in sink distractors.
+                    Now based on the image provided and the task description, suppose the robot grasped at p_3, please choose the image tile the gripper should move to for finishing the task.
+                    </p>
+                    <p><span class="options">Option A: a_0 &nbsp;&nbsp;&nbsp;&nbsp; Option B: b_4 &nbsp;&nbsp;&nbsp;&nbsp; Option C: d_2 &nbsp;&nbsp;&nbsp;&nbsp; Option D: c_4</span></p>
+
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answers: Option D and Option C</p>
+                  `;
                 } else if (selectedOption === 'Task Planning Understanding') {
                   img.src = '';
                   displayArea.innerHTML = `
