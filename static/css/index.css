@@ -245,3 +245,8 @@ body {
   opacity: 1;
   transform: translateX(-50%) translateY(0%); /* Moves the tooltip downward */
 }
+
+.tooltip-text {
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.3s ease;
+}

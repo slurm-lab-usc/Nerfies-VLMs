@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="ManipBench: Benchmarking Vision-Language Models for Low-Level Robot Manipulation.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="keywords" content="ManipBench">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ManipBench: Benchmarking Vision-Language Models for Low-Level Robot Manipulation</title>
 
@@ -31,7 +31,6 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -39,6 +38,9 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <link rel="stylesheet" href="./static/css/index.css">
+
 </head>
 <body>
 
@@ -61,6 +63,10 @@
             </span>
             <span class="author-block">
               <a href="https://zshanggu.github.io">Zeyu Shangguan</a>,</span>
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://stefanosnikolaidis.net/">Stefanos Nikolaidis</a>,</span>
             </span>
             <span class="author-block">
               <a href="https://yuewang.xyz">Yue Wang</a>,</span>
@@ -188,7 +194,6 @@
 
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
 
@@ -197,7 +202,7 @@
       <!-- Types of Questions in ManipBench -->
       <div class="columns is-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3 has-text-centered">Types of Questions in ManipBench</h2>
+          <h2 class="title is-3 has-text-centered">Type of Questions in ManipBench</h2>
           <p class="has-text-justified">
             ManipBench includes a total of <b>14156</b> multiple choice questions to evaluate the reasoning capabilities of the VLMs as robotic manipulation agents.
             These questions are spread across numerous categories and dimensions as shown in the table below.
@@ -218,92 +223,92 @@
                   <td rowspan="3" style="vertical-align: middle; text-align: center;">
                     <strong>From Public Robotic Manipulation Datasets <br>(Question Type 1)</strong>
                   </td>
-                  <td  class="tooltip-row" data-tooltip="Agent chooses the correct trajectory information given scene images and task descriptions obtained from DROID pick and place tasks.">DROID pick and place</td>
+                  <td  class="tooltip-row" data-tooltip="Agent chooses the correct trajectory information given scene images and task descriptions obtained from DROID pick and place tasks."><span class="tooltip-text">DROID pick and place (Q1)</span></td>
                   <td>2020</td>
                 </tr>
                 <tr>
-                  <td class="tooltip-row" data-tooltip="Agent chooses the correct trajectory information given scene images and task descriptions obtained from DROID articulated tasks.">DROID articulated</td>
+                  <td class="tooltip-row" data-tooltip="Agent chooses the correct trajectory information given scene images and task descriptions obtained from DROID articulated tasks."><span class="tooltip-text">DROID articulated (Q1)</span></td>
                   <td>1640</td>
                 </tr>
                 <tr style="border-bottom: 1.5px solid black;">
-                  <td class="tooltip" data-tooltip="Agent chooses the correct trajectory information given scene images and task descriptions obtained from Bridge data.">Bridge</td>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct trajectory information given scene images and task descriptions obtained from Bridge data."><span class="tooltip-text">Bridge (Q1)</span></td>
                   <td>3540</td>
                 </tr>
                 <tr>
                   <td rowspan="3" style="vertical-align: middle; text-align: center;">
                     <strong>From Public Robotic Manipulation Datasets <br>(Question Type 2)</strong>
                   </td>
-                  <td class="tooltip" data-tooltip="Agent chooses the correct pick and place points separately given scene images and task descriptions obtained from DROID pick and place tasks.">DROID pick and place</td>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct pick and place points separately given scene images and task descriptions obtained from DROID pick and place tasks."><span class="tooltip-text">DROID pick and place (Q2)</span></td>
                   <td>1010</td>
                 </tr>
                 <tr>
-                  <td class="tooltip" data-tooltip="Agent chooses the correct pick and place points separately given scene images and task descriptions obtained from DROID articulated tasks.">DROID articulated</td>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct pick and place points separately given scene images and task descriptions obtained from DROID articulated tasks."><span class="tooltip-text">DROID articulated (Q2)</span></td>
                   <td>820</td>
                 </tr>
                 <tr style="border-bottom: 1.5px solid black;">
-                  <td class="tooltip" data-tooltip="Agent chooses the correct pick and place points separately given scene images and task descriptions obtained from Bridge data.">Bridge</td>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct pick and place points separately given scene images and task descriptions obtained from Bridge data."><span class="tooltip-text">Bridge (Q2)</span></td>
                   <td>1770</td>
                 </tr>
                 <tr>
                   <td rowspan="10" style="vertical-align: middle; text-align: center;">
                     <strong>For Evaluating Fabric Manipulation (Manually Curated)</strong>
                   </td>
-                  <td class="tooltip" data-tooltip="Evaluates physical reasoning capabilities focused on human intuition. Given four choices in natural language, the VLM has to pick the correct one based on common-sense.">Task Planning Understanding</td>
+                  <td class="tooltip" data-tooltip="Evaluates physical reasoning capabilities focused on human intuition. Given four choices in natural language, the VLM has to pick the correct one based on common-sense."><span class="tooltip-text">Task Planning Understanding</span></td>
                   <td>240</td>
                 </tr>
                 <tr>
-                  <td class="tooltip" data-tooltip="Evaluates agent's ability to infer the correct fabric state. Given an image observation and four choices describing the state (e.g., lying flat, slightly crumpled), the VLM has to pick the correct one.">Fabric State Understanding</td>
+                  <td class="tooltip" data-tooltip="Evaluates agent's ability to infer the correct fabric state. Given an image observation and four choices describing the state (e.g., lying flat, slightly crumpled), the VLM has to pick the correct one."><span class="tooltip-text">Fabric State Understanding</span></td>
                   <td>234</td>
                 </tr>
                 <tr>
-                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of directions by noting the location of fabric corners in the scene (e.g., “bottom-right”), which the model has to correctly identify from an image of a flat fabric.">Spatial Reasoning Abilities</td>
+                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of directions by noting the location of fabric corners in the scene (e.g., “bottom-right”), which the model has to correctly identify from an image of a flat fabric."><span class="tooltip-text">Spatial Reasoning Abilities</span></td>
                   <td>325</td>
                 </tr>
                 <tr>
-                  <td class="tooltip" data-tooltip="Evaluates agent's ability to map key-points in the image observation to the correct grid location.">Keypoint Mapping Abilities</td>
+                  <td class="tooltip" data-tooltip="Evaluates agent's ability to map key-points in the image observation to the correct grid location."><span class="tooltip-text">Keypoint Mapping Abilities</span></td>
                   <td>312</td>
                 </tr>
                 <tr>
-                  <td class="tooltip" data-tooltip="Evaluates temporal understanding capabilities by prompting VLMs to re-arrange a shuffled sequence of image observations from a single task roll-out, based on the sequence of fabric states after each action. The model has to choose the correct option from a list of different permutations of the sequence.">Temporal Understanding of Action Sequence</td>
+                  <td class="tooltip" data-tooltip="Evaluates temporal understanding capabilities by prompting VLMs to re-arrange a shuffled sequence of image observations from a single task roll-out, based on the sequence of fabric states after each action. The model has to choose the correct option from a list of different permutations of the sequence."><span class="tooltip-text">Temporal Understanding of Action Sequence</span></td>
                   <td>240</td>
                 </tr>
                 <tr>
-                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of the impact of short versus long pick-place actions in achieving the desired fabric configuration from the initial configuration provided as an image observation.">Action Length Understanding</td>
+                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of the impact of short versus long pick-place actions in achieving the desired fabric configuration from the initial configuration provided as an image observation."><span class="tooltip-text">Action Length Understanding</span></td>
                   <td>240</td>
                 </tr>
                 <tr>
-                  <td class="tooltip" data-tooltip="Evaluates agent's ability to predict the correct pick-place action from four choices of robot actions to achieve a specified state transition, based on initial and final image observations.">Inverse Dynamics Understanding</td>
+                  <td class="tooltip" data-tooltip="Evaluates agent's ability to predict the correct pick-place action from four choices of robot actions to achieve a specified state transition, based on initial and final image observations."><span class="tooltip-text">Inverse Dynamics Understanding</span></td>
                   <td>240</td>
                 </tr>
                 <tr>
-                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of interactions between a fabric and solid objects in the scene. Given an image observation of a scene, consisting of a single fabric and multiple solid objects, the VLM has to choose the correct pick-place action based on the specified constraints in natural language.">Fabric-Solid Body Interaction Understanding</td>
+                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of interactions between a fabric and solid objects in the scene. Given an image observation of a scene, consisting of a single fabric and multiple solid objects, the VLM has to choose the correct pick-place action based on the specified constraints in natural language."><span class="tooltip-text">Fabric-Solid Body Interaction Understanding</span></td>
                   <td>282</td>
                 </tr>
                 <tr>
-                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of interactions between multiple fabrics, particularly when performing bi-manual actions. Given an image observation of a scene, consisting of multiple fabrics lying on a table, the VLM has to choose the correct action based on the specified constraints in natural language.">Fabric-Fabric Interaction Understanding</td>
+                  <td class="tooltip" data-tooltip="Evaluates agent's understanding of interactions between multiple fabrics, particularly when performing bi-manual actions. Given an image observation of a scene, consisting of multiple fabrics lying on a table, the VLM has to choose the correct action based on the specified constraints in natural language."><span class="tooltip-text">Fabric-Fabric Interaction Understanding</span></td>
                   <td>280</td>
                 </tr>
                 <tr style="border-bottom: 1.5px solid black;">
-                  <td class="tooltip" data-tooltip="Evaluates agent's counterfactual reasoning abilities using ground-truth data from other dimensions. Given an image observation and a description of a particular robot action, along with its impact, the VLM has to correctly reason about the consequences of any changes in the scene and/or robot action.">Counter Factual Understanding</td>
+                  <td class="tooltip" data-tooltip="Evaluates agent's counterfactual reasoning abilities using ground-truth data from other dimensions. Given an image observation and a description of a particular robot action, along with its impact, the VLM has to correctly reason about the consequences of any changes in the scene and/or robot action."><span class="tooltip-text">Counter Factual Understanding</span></td>
                   <td>269</td>
                 </tr>
                 <tr>
                   <td rowspan="4" style="vertical-align: middle; text-align: center;">
                     <strong>From Existing Simulation Environments</strong>
                   </td>
-                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Place Carrot task from the SimplerEnv benchmark.">Place carrot<br>(pick and place task)</td>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Place Carrot task from the SimplerEnv benchmark."><span class="tooltip-text">Place carrot<br>(pick and place task)</span></td>
                   <td>277</td>
                 </tr>
                 <tr>
-                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Close Drawer task from the SimplerEnv benchmark.">Close Drawer<br>(articulated manipulation task)</td>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Close Drawer task from the SimplerEnv benchmark."><span class="tooltip-text">Close Drawer<br>(articulated manipulation task)</span></td>
                   <td>83</td>
                 </tr>
                 <tr>
-                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Straighten Rope task from the Softgym benchmark.">Straighten Rope<br>(deformable manipulation task)</td>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Straighten Rope task from the Softgym benchmark."><span class="tooltip-text">Straighten Rope<br>(deformable manipulation task)</span></td>
                   <td>140</td>
                 </tr>
                 <tr style="border-bottom: 1.5px solid black;">
-                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Sweep Object task from the RLBench benchmark.">Sweep Object<br>(tool manipulation task)</td>
+                  <td class="tooltip" data-tooltip="Agent chooses the correct key-point information given scene images and task descriptions obtained for the Sweep Object task from the RLBench benchmark."><span class="tooltip-text">Sweep Object<br>(tool manipulation task)</span></td>
                   <td>194</td>
                 </tr>
               </tbody>
@@ -318,6 +323,426 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Sample Questions in ManipBench</h2>
+          <p class="has-text-justified">
+            Kindly select the question type from the dropdown below in order to view a sample multiple-choice question for the same in ManipBench.
+            Some details specific to the prompts given to the VLMs are omitted for simplicity.
+          </p>
+          <br>
+
+          <!-- Container for both dropdowns -->
+          <div class="dropdown-container">
+            <!-- Left Dropdown -->
+            <div class="dropdown-left">
+              <label for="questionTypeLeft" class="dropdown-label">Select the Question Category:</label>
+              <select id="questionTypeLeft" onchange="updateRightDropdown()" class="dropdown-select">
+                <option value="">--Select--</option>
+                <option value="Q1">From Public Robotic Datasets (Question Type 1)</option>
+                <option value="Q2">From Public Robotic Datasets (Question Type 2)</option>
+                <option value="fabric">For Evaluating Fabric Manipulation (Manually Curated)</option>
+                <option value="sim">From Existing Simulation Environments</option>
+              </select>
+            </div>
+
+            <!-- Right Dropdown -->
+            <div class="dropdown-right">
+              <label for="questionTypeRight" class="dropdown-label">Select Question Type / Task:</label>
+              <select id="questionTypeRight" class="dropdown-select" disabled>
+                <option value="">--Select--</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Space for the final display (image and text) -->
+          <div id="finalImage" class="final-image"></div>
+          <div id="finalDisplay" class="final-display"></div>
+
+          <!-- Clear Button -->
+          <button id="clearButton" onclick="clearSelection()" class="clear-button">Clear</button>
+
+          <!-- CSS Styling -->
+          <style>
+            .dropdown-container {
+              display: flex;
+              justify-content: space-between;
+              gap: 20px;
+              margin-bottom: 20px;
+              font-family: Arial, sans-serif;
+            }
+
+            .dropdown-left, .dropdown-right {
+              width: 45%;
+            }
+
+            .dropdown-label {
+              font-size: 16px;
+              font-weight: bold;
+              color: #333;
+              margin-bottom: 8px;
+            }
+
+            .dropdown-select {
+              padding: 8px 12px;
+              font-size: 14px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              outline: none;
+              background-color: #f9f9f9;
+              color: #555;
+              width: 100%;
+              transition: border-color 0.3s ease;
+            }
+
+            .dropdown-select:focus {
+              border-color: #007BFF;
+              box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+
+            .final-display {
+              margin-top: 20px;
+              font-size: 18px;
+              font-weight: normal;
+              color: #333;
+            }
+
+            .options {
+              font-size: 16px;  /* Smaller font size for options */
+              font-weight: lighter;
+              color: #555;
+            }
+
+            .final-image {
+              margin-top: 20px;
+              text-align: center;
+            }
+
+            .clear-button {
+              padding: 10px 20px;
+              background-color: #FF5A5F;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              font-size: 14px;
+              margin-top: 20px;
+            }
+
+            .clear-button:hover {
+              background-color: #FF383E;
+            }
+          </style>
+
+          <!-- JavaScript to handle dropdown behavior -->
+          <script>
+            // Object to store options for the second dropdown based on the selection from the first
+            const optionsForRight = {
+              Q1: ['DROID pick and place (Q1)', 'DROID articulated (Q1)', 'Bridge (Q1)'],
+              Q2: ['DROID pick and place (Q2)', 'DROID articulated (Q2)', 'Bridge (Q2)'],
+              fabric: ['Task Planning Understanding', 'Fabric State Understanding', 'Spatial Reasoning Abilities', 'Keypoint Mapping Abilities', 'Temporal Understanding of Action Sequence', 'Action Length Understanding', 'Inverse Dynamics Understanding', 'Fabric-Solid Body Interaction Understanding', 'Fabric-Fabric Interaction Understanding', 'Counter Factual Understanding'],
+              sim: ['Place Carrot', 'Close Drawer', 'Straighten Rope', 'Sweep Object'],
+            };
+
+            // Function to update the right dropdown options based on the left dropdown selection
+            function updateRightDropdown() {
+              const leftSelection = document.getElementById('questionTypeLeft').value;
+              const rightDropdown = document.getElementById('questionTypeRight');
+
+              // Clear current right dropdown options
+              rightDropdown.innerHTML = '<option value="">--Select--</option>';
+              
+              if (leftSelection) {
+                const options = optionsForRight[leftSelection];
+                // Populate right dropdown with new options based on left selection
+                options.forEach(option => {
+                  const optionElement = document.createElement('option');
+                  optionElement.value = option;
+                  optionElement.textContent = option;
+                  rightDropdown.appendChild(optionElement);
+                });
+                // Enable the right dropdown
+                rightDropdown.disabled = false;
+              } else {
+                rightDropdown.disabled = true;
+              }
+            }
+
+            // Function to display the final content (image and text) based on the right dropdown selection
+            document.getElementById('questionTypeRight').addEventListener('change', function() {
+              const selectedOption = this.value;
+              const displayArea = document.getElementById('finalDisplay');
+              const imageArea = document.getElementById('finalImage');
+
+              // Clear previous content (if any)
+              imageArea.innerHTML = '';
+              displayArea.innerHTML = '';
+
+              if (selectedOption) {
+                // Create an image element
+                const img = document.createElement('img');
+                img.style.maxWidth = '100%';  // You can adjust the width as per the design
+                img.style.height = 'auto';
+
+                // Add specific content based on the selected option
+                if (selectedOption === 'DROID pick and place (Q1)') {
+                  img.src = 'https://via.placeholder.com/400x300?text=DROID+pick+and+place';  // Replace with actual image URL
+                  displayArea.textContent = 'You selected DROID pick and place. This task involves manipulating robotic arms to pick and place objects.';
+                } else if (selectedOption === 'DROID articulated (Q1)') {
+                  img.src = 'https://via.placeholder.com/400x300?text=DROID+articulated';  // Replace with actual image URL
+                  displayArea.textContent = 'You selected DROID articulated. This task involves controlling a robotic arm with multiple joints.';
+                } else if (selectedOption === 'Bridge (Q1)') {
+                  img.src = 'https://via.placeholder.com/400x300?text=Bridge';  // Replace with actual image URL
+                  displayArea.textContent = 'You selected Bridge. This task focuses on bridging operations using robotic arms.';
+                } else if (selectedOption === 'DROID pick and place (Q2)') {
+                  img.src = 'https://via.placeholder.com/400x300?text=DROID+pick+and+place';  // Replace with actual image URL
+                  displayArea.textContent = 'You selected DROID pick and place. This task involves manipulating robotic arms to pick and place objects.';
+                } else if (selectedOption === 'DROID articulated (Q2)') {
+                  img.src = 'https://via.placeholder.com/400x300?text=DROID+articulated';  // Replace with actual image URL
+                  displayArea.textContent = 'You selected DROID articulated. This task involves controlling a robotic arm with multiple joints.';
+                } else if (selectedOption === 'Bridge (Q2)') {
+                  img.src = 'https://via.placeholder.com/400x300?text=Bridge';  // Replace with actual image URL
+                  displayArea.textContent = 'You selected Bridge. This task focuses on bridging operations using robotic arms.';
+                } else if (selectedOption === 'Task Planning Understanding') {
+                  img.src = '';
+                  displayArea.innerHTML = `
+                    <p>Given a fabric with one corner folded inward, what step should be taken to get a flat fabric?</p>
+                    <p><span class="options">Option A: Choose both the corners adjacent to the folded corner and fold them simultaneously into the fabric center</span></p>
+                    <p><span class="options">Option B: Drag the diagonally opposite corner farther from the fabric center</span></p>
+                    <p><span class="options">Option C: Pick the diagonally opposite corner and move it at the fabric center</span></p>
+                    <p><span class="options">Option D: Unfold that corner to make the fabric flat</span></p>
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answer: Option D</p>
+                  `;
+                } else if (selectedOption === 'Fabric State Understanding') {
+                  img.src = 'static/images/samples/fabric/fabric-state.png';
+                  displayArea.innerHTML = `
+                    <p> I shall be providing you with an image of a fabric lying on the table in any possible configuration.
+                    This image is divided into 25 grid cells. There are also some key-points annotated on the fabric with the corresponding label.
+                    Choose one of these options which would be describing the fabric configuration correctly.
+                    </p>
+                    <p><span class="options">Option A: The fabric is folded in a diagonal manner</span></p>
+                    <p><span class="options">Option B: The fabric on the table is highly crumpled</span></p>
+                    <p><span class="options">Option C: More than one corners of the fabric are folded inward</span></p>
+                    <p><span class="options">Option D: The fabric is lying flat on the table</span></p>
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answer: Option B</p>
+                  `;
+                } else if (selectedOption === 'Spatial Reasoning Abilities') {
+                  img.src = 'static/images/samples/fabric/spatial-understanding.png';
+                  displayArea.innerHTML = `
+                    <p> I shall be providing you with an image of a fabric lying flat on the table.
+                    This image is divided into 25 grid cells. There are also some key-points annotated on the fabric with the corresponding label.
+                    Choosethe grid cell location representing the fabric top-right corner.
+                    </p>
+                    <p><span class="options">Option A: d_0 &nbsp;&nbsp;&nbsp;&nbsp; Option B: b_1 &nbsp;&nbsp;&nbsp;&nbsp; Option C: a_4 &nbsp;&nbsp;&nbsp;&nbsp; Option D: c_3</span></p>
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answer: Option A</p>
+                  `;
+                } else if (selectedOption === 'Keypoint Mapping Abilities') {
+                  img.src = 'static/images/samples/fabric/keypoint-mapping.png';
+                  displayArea.innerHTML = `
+                    <p> I shall be providing you with an image of a fabric lying flat on the table.
+                    This image is divided into 25 grid cells. There are also some key-points annotated on the fabric with the corresponding label.
+                    Choose the grid cell location where the keypoint P0_2 is located.
+                    </p>
+                    <p><span class="options">Option A: d_0 &nbsp;&nbsp;&nbsp;&nbsp; Option B: b_3 &nbsp;&nbsp;&nbsp;&nbsp; Option C: e_4 &nbsp;&nbsp;&nbsp;&nbsp; Option D: c_2</span></p>
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answer: Option B</p>
+                  `;
+                } else if (selectedOption === 'Temporal Understanding of Action Sequence') {
+                  img.src = 'static/images/samples/fabric/temporal-sequence.png';
+                  displayArea.innerHTML = `
+                    <p> I shall be providing you with multiple images of a fabric on a table. 
+                    These images correspond to different configurations of the fabric.  Each image is divided into 25 grid cells, and is labeled as 0, 1, 2, and so on.
+                    I shall be providing you with a task description and your role is to reorder these images in a way that a single pick-and-place action can lead to the transition between one image and the next.
+                    </p>
+
+                    <p> <br> You are also provided with the description of the fabric state in each of the images as: <br>
+                    Image 0: Two corners of the fabric are folded <br> Image 1: The fabric appears to have been diagonally folded <br> Image 2: The fabric appears to have been diagonally folded <br> Image 3: The fabric is lying flat on the table <br> Image 4: One corner of the fabric is folded
+                    </p>
+
+                    <p> <br> Given four options A to D, representing a reordering of the images, your task is to pick the correct choice that is consistent with the requirements stated above. 
+                    Task description: Flatten the fabric by unfolding the corners one at a time, followed by folding the resulting flat fabric repeatedly in a way that you always align the farthest corners to one another
+                    </p>
+
+                    <p><span class="options">Option A: 0, 2, 3, 1, 4 &nbsp;&nbsp;&nbsp;&nbsp; Option B: 0, 3, 2, 1, 4 &nbsp;&nbsp;&nbsp;&nbsp; Option C: 0, 4, 3, 1, 2 &nbsp;&nbsp;&nbsp;&nbsp; Option D: 0, 2, 1, 3, 4</span></p>
+                    <br>
+
+                    <p style="color: green; font-weight: bold;">Answer: Option C</p>
+                  `;
+                } else if (selectedOption === 'Action Length Understanding') {
+                  img.src = 'static/images/samples/fabric/action-length.png';
+                  displayArea.innerHTML = `
+                    <p> I shall be providing you with an image of a fabric lying on the table that is either slightly crumpled or has one corner that is folded inward slightly.
+                    This image is divided into 25 grid cells. There are also some key-points annotated on the fabric with the corresponding label.
+                    The given fabric configuration needs only a slight adjustment to flatten it via a pick-and-place action. Note that adjusting the fabric more by picking and placing it over longer distances might add more wrinkles to the fabric.
+                    </p>
+
+                    <p> <br> Given the fabric key-point P0_1 located in the grid c_1, choose a placing location among these grid cells
+                    </p>
+
+                    <p><span class="options">Option A: c_0 &nbsp;&nbsp;&nbsp;&nbsp; Option B: a_0 &nbsp;&nbsp;&nbsp;&nbsp; Option C: e_0 &nbsp;&nbsp;&nbsp;&nbsp; Option D: e_3</span></p>
+                    <br>
+
+                    <p style="color: green; font-weight: bold;">Answer: Option A</p>
+                  `;
+                } else if (selectedOption === 'Inverse Dynamics Understanding') {
+                  img.src = 'static/images/samples/fabric/inverse-dynamics.png';
+                  displayArea.innerHTML = `
+                    <p> I shall be providing you with two images of a fabric on a table. 
+                    The first image corresponds to the initial configuration of the fabric and the second image corresponds to the final configuration of the fabric.
+                    Both the images are divided into 25 grid cells with the labels of a_0, b_0,...,d_4, e_4.
+                    </p>
+
+                    <p> <br> The transition from the initial configuration to the final configuration is achieved by a single pick-and-place action.
+                    Given the fabric key point P0_2 located in the grid d_3 being the picking point, choose the correct grid cell location for the place point among
+                    </p>
+
+                    <p><span class="options">Option A: d_4 &nbsp;&nbsp;&nbsp;&nbsp; Option B: c_1 &nbsp;&nbsp;&nbsp;&nbsp; Option C: b_2 &nbsp;&nbsp;&nbsp;&nbsp; Option D: d_2</span></p>
+                    <br>
+
+                    <p style="color: green; font-weight: bold;">Answer: Option D</p>
+                  `;
+                } else if (selectedOption === 'Fabric-Solid Body Interaction Understanding') {
+                  img.src = 'static/images/samples/fabric/fabric-solid.png';
+                  displayArea.innerHTML = `
+                    <p> I shall be providing you with an image of a fabric lying on the table with certain objects on or around it.
+                    This image is divided into 25 grid cells. There are also some key-points annotated on the fabric with the corresponding label.
+                    Given the fabric key-point P0_2 located in the grid b_4, choose a placing location among the following such that the resulting pick-and-place action DOES NOT displace or cover any of the objects in the scene.
+                    </p>
+
+                    <p><span class="options">Option A: a_4 &nbsp;&nbsp;&nbsp;&nbsp; Option B: c_1 &nbsp;&nbsp;&nbsp;&nbsp; Option C: c_3 &nbsp;&nbsp;&nbsp;&nbsp; Option D: d_4</span></p>
+                    <br>
+
+                    <p style="color: green; font-weight: bold;">Answer: Option C</p>
+                  `;
+                } else if (selectedOption === 'Fabric-Fabric Interaction Understanding') {
+                  img.src = 'static/images/samples/fabric/fabric-fabric.png';
+                  displayArea.innerHTML = `
+                    <p> I shall be providing you with an image of different fabrics lying flat on a table, possibly on top of one another.
+                    This image is divided into 25 grid cells. There are also some key-points annotated on the fabric with the corresponding label.
+                    </p>
+
+                    <p> <br> There are two robot arms who would each grab one of those points and lift the grasped points vertically upwards simultaneously.
+                    Given four options A to D, each representing a pair of points lifted vertically by the robot arms, your task is to choose the correct pair of points such that the given motion will displace ONLY one fabric out of all the fabrics present in the scene.
+                    </p>
+
+                    <p><span class="options">Option A: Point P1_3 in grid cell e_3 and Point P1_1 in grid cell d_0</span></p>
+                    <p><span class="options">Option B: Point P0_1 in grid cell b_0 and Point P0_4 in grid cell a_2</span></p>
+                    <p><span class="options">Option C: Point P2_3 in grid cell b_4 and Point P2_4 in grid cell c_4</span></p>
+                    <p><span class="options">Option D: Point P0_1 in grid cell b_0 and Point P1_1 in grid cell d_0</span></p>
+                    
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answer: Option B</p>
+                  `;
+                } else if (selectedOption === 'Counter Factual Understanding') {
+                  img.src = 'static/images/samples/fabric/counter-factual.png';
+                  displayArea.innerHTML = `
+                    <p> I shall be providing you with an image of a fabric lying on the table, with some objects on or around it.
+                    This image is divided into 25 grid cells. There are also some key-points annotated on the fabric with the corresponding label.
+                    </p>
+
+                    <p> <br> If we pick the fabric point P0_3, located in the grid cell b_3, and place it at a random point in the grid cell c_2, then no object is impacted by this action.
+                    Which of the following is most likely to happen if another solid object is added to the scene at the grid cell location of a_4?
+                    </p>
+
+                    <p><span class="options">Option A: At least one object is displaced and at least one object gets covered by the fabric action</span></p>
+                    <p><span class="options">Option B: At least one object is displaced by the specified fabric action</span></p>
+                    <p><span class="options">Option C: No object is impacted by the specified fabric action</span></p>
+                    <p><span class="options">Option D: At least one object gets covered by the specified fabric action</span></p>
+                    
+                    <br>
+                    <p style="color: green; font-weight: bold;">Answer: Option C</p>
+                  `;
+                } else if (selectedOption === 'Place Carrot') {
+                  img.src = 'static/images/samples/sim/place-carrot.png';
+                  displayArea.innerHTML = `
+                    <p> The robot is working on a manipulation task.
+                    The high-level instruction for the manipulation. The task is put the carrot on the plate. 
+                    Now you will be given an image that is annotated with multiple key-points, K0, K1, K2, K3, that are potential waypoints for the robot to grasp the carrot.
+                    </p>
+
+                    <p> Can you tell me which keypoint the robot should move its gripper to grasp the carrot? 
+                    You have four options as annotated on the image: K0, K1, K2, K3. Please return your selection. Your return should be one of the provided options.
+                    </p>
+
+                    <p><span class="options">Option A: K0 &nbsp;&nbsp;&nbsp;&nbsp; Option B: K3 &nbsp;&nbsp;&nbsp;&nbsp; Option C: K1 &nbsp;&nbsp;&nbsp;&nbsp; Option D: K2</span></p>
+                    <br>
+
+                    <p style="color: green; font-weight: bold;">Answer: Option A</p>
+                  `;
+                } else if (selectedOption === 'Close Drawer') {
+                  img.src = 'static/images/samples/sim/close-drawer.png';
+                  displayArea.innerHTML = `
+                    <p> The robot is working on a manipulation task.
+                    The high-level instruction for the manipulation task is to close the top drawer.
+                    Now you will be given an image that is annotated with multiple keypoints, K0, K1, K2, K3, that are potential waypoints for the robot to make the contact with the top drawer such that the robot can eventually close the top drawer.
+                    Can you tell me to which keypoint the robot should move its gripper to make contacts with the top drawer?
+                    </p>
+
+                    <p><span class="options">Option A: K2 &nbsp;&nbsp;&nbsp;&nbsp; Option B: K1 &nbsp;&nbsp;&nbsp;&nbsp; Option C: K0 &nbsp;&nbsp;&nbsp;&nbsp; Option D: K3</span></p>
+                    <br>
+
+                    <p style="color: green; font-weight: bold;">Answer: Option D</p>
+                  `;
+                } else if (selectedOption === 'Straighten Rope') {
+                  img.src = 'static/images/samples/sim/straighten-rope.png';
+                  displayArea.innerHTML = `
+                    <p> The robot is working on a bimanual manipulation task.
+                    The high-level instruction for the task is to straighten the rope.
+                    Now you will be given an image that is annotated with multiple keypoints, F, K0, K1, K2, K3.
+                    Keypoint F is where the robot will grasp the rope with its one gripper. 
+                    Keypoints K0, K1, K2, K3 are potential waypoints where the robot can grasp the rope with its other hand.
+                    </p>
+
+                    <p> Can you tell me which keypoint the robot should move its gripper to grasp the rope?
+                    You have four options as annotated on the image: K0, K1, K2, K3. Please return your selection. 
+                    </p>
+
+                    <p><span class="options">Option A: K2 &nbsp;&nbsp;&nbsp;&nbsp; Option B: K3 &nbsp;&nbsp;&nbsp;&nbsp; Option C: K1 &nbsp;&nbsp;&nbsp;&nbsp; Option D: K0</span></p>
+                    <br>
+
+                    <p style="color: green; font-weight: bold;">Answer: Option C</p>
+                  `;
+                } else if (selectedOption === 'Sweep Object'){
+                  img.src = 'static/images/samples/sim/sweep-object.png';
+                  displayArea.innerHTML = `
+                    <p> The robot is working on a manipulation task. The high-level instruction for the manipulation task is to Pull the block towards the blue square.
+                    Now you will be given an image that is annotated with multiple keypoints, K0, K1, K2, K3, that are potential waypoints for the robot to grasp the stick.
+                    Can you tell me at which keypoint the robot should grasp the stick?
+                    </p>
+
+                    <p><span class="options">Option A: K0 &nbsp;&nbsp;&nbsp;&nbsp; Option B: K1 &nbsp;&nbsp;&nbsp;&nbsp; Option C: K2 &nbsp;&nbsp;&nbsp;&nbsp; Option D: K3</span></p>
+                    <br>
+
+                    <p style="color: green; font-weight: bold;">Answer: Option B</p>
+                  `;
+                }
+
+                // Append the image element to the image display area
+                imageArea.appendChild(img);
+              }
+            });
+
+            // Function to clear the selection and reset everything
+            function clearSelection() {
+              document.getElementById('questionTypeLeft').value = '';
+              document.getElementById('questionTypeRight').value = '';
+              document.getElementById('questionTypeRight').innerHTML = '<option value="">--Select--</option>';
+              document.getElementById('questionTypeRight').disabled = true;
+              document.getElementById('finalDisplay').textContent = '';
+              document.getElementById('finalImage').innerHTML = '';
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -330,7 +755,6 @@
 }</code></pre>
   </div>
 </section>
-
 
 <footer class="footer">
   <div class="container">
@@ -356,4 +780,13 @@
 </footer>
 
 </body>
+
+<style>
+  .tooltip-text:hover {
+    background-color: rgb(240, 194, 194);
+    transform: scale(1.05)
+  }
+
+</style>
+
 </html>
